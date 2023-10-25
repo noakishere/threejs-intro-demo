@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			body {
+				margin: 0;
+			}
+
+			#info {
+				position: absolute;
+				top: 10px;
+				/* width: 100%; */
+				padding: 1%;
+				/* text-align: center; */
+				z-index: 100;
+				display: block;
+				color: white;
+			}
+		</style>
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="info">
+			<ul>
+				<li>threejs.org</li>
+			</ul>
+		</div>
+
+		<!-- Either with npm or CDN Like done below -->
+		<!-- Version must be identified. Can check on npm for latest version -->
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@v0.157.0/build/three.module.js",
+					"three/addons/GLTFLoader.js": "https://unpkg.com/three@0.157.0/examples/jsm/loaders/GLTFLoader.js",
+					"three/addons/OrbitControls.js": "https://unpkg.com/three@0.157.0/examples/jsm/controls/OrbitControls.js",
+					"three/addons/FirstPersonControls.js": "https://unpkg.com/three@0.157.0/examples/jsm/controls/FirstPersonControls.js"
+				}
+			}
+		</script>
+		<!-- Type module is important to get a reference from the imported CDN Library -->
+		<script type="module" src="app.js"></script>
+	</body>
+</html>
